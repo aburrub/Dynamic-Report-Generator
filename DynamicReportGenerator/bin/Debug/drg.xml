@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<MySettings>
+  <Reports>
+    <Report name="rep1">
+      <ReportCategory>root</ReportCategory>
+      <SqlStatement>SELECT t1.id,t1.version,t1.agency_id,t1.ar_description,t1.ar_name,t1.description,t1.major_sector_id,t1.name,t1.national_code,t1.parent_id,t2.id,t2.version,t2.ar_description,t2.ar_name,t2.code,t2.description,t2.name
+ FROM budget_entity t1,major_sector t2
+ WHERE t1.major_sector_id=t2.id
+ AND t1.parent_id=t1.id
+ </SqlStatement>
+      <ConnectionString>LFeniO+We2hon2ieAm4qzyjL5qeVOpPJtaQCIKvLq15HUy040+2i1gUC8vSQEVHJc8kgy+kr0IBizeyxoDcr952IhqTnQ4HevlCjjhF2VlS7or0C0XztYR0JRTnJQXylyfjhZ89un4bYed4T+JwNxU9MWYO2tS+Og08c+yFahudAnrr2mDwzNNDXO8N90v1i</ConnectionString>
+      <dbms>PostgreSql</dbms>
+    </Report>
+    <Report name="StatusByManagerReport">
+      <ReportCategory>employee</ReportCategory>
+      <SqlStatement>SELECT t1.id,t1.first_name,t1.last_name,t2.status_bygmgr
+ FROM employee t1,leave t2
+ WHERE t2.employee_id=t1.id
+ </SqlStatement>
+      <ConnectionString>PjJOOscS5Xxw25XwNCfWNjoMSwzBn5fPBArlmFnQRh00eMx1Jr83/FUykT/1M+QObA7BcAzFMDC1Lxdpr6mKZ5PNVlNlgSOf8ZqV02OmWprihYHo1aH+QIrwiQnYlnyMUKkPnRBsQe2K8IkJ2JZ8jKBY9ZdlO92rnTBpwJnf2b1hy2nCBqaVL6D5eRkeRNqP</ConnectionString>
+      <dbms>PostgreSql</dbms>
+    </Report>
+    <Report name="false emp">
+      <ReportCategory>employee</ReportCategory>
+      <SqlStatement>SELECT t1.id,t2.bage_num,t2.is_deleted
+ FROM employee t1,employee_bage t2
+ WHERE t2.employee_id=t1.id
+  AND t2.is_deleted='False'</SqlStatement>
+      <ConnectionString>CRFYLbifmNybNNEHbXc9ij24bFYL4CqnldbyExLrT13GNmChH3981GpLO3PkBAy5ZVbd2ds77GZJ/P98lKCnNYrQVFziGhrpVZYUw/8RW4xeXXZhPmQctlZwwP76z3qdVzVlqez4J1FWcMD++s96nT5DFCrPHXj1dmwaQmZ6COBl9Fcg8HPp5o4pyxQQEPcE</ConnectionString>
+      <dbms>PostgreSql</dbms>
+    </Report>
+    <Report name="in rep">
+      <ReportCategory>employee</ReportCategory>
+      <SqlStatement>SELECT t1.id,t1.emp_id,t1.emp_no
+ FROM employee t1 WHERE t1.emp_no in ('065650467','62300','93039')</SqlStatement>
+      <ConnectionString>6uo8aLRWbED9DnoYwt6UcloQvlCIN36iIeBYEA4Y5hdK1imK2hXIRfm5F6djKkQW4q77gTV13iT6EvEEc7DkCe8p2xxDJfLWFApLWbKtioXcEFQf1aMDV5j4HaFaFvDG4VP31RwHvh2Y+B2hWhbwxnO6BNme8HwhUmImp6z5Ck19bCgtkyBOVqtE92id7cyE</ConnectionString>
+      <dbms>PostgreSql</dbms>
+    </Report>
+    <Report name="rrr">
+      <ReportCategory>employee</ReportCategory>
+      <SqlStatement>SELECT t1.id
+ FROM employee t1 WHERE t1.emp_id in ('905077780','852491091','943657239','938075173','034064568') AND t1.religion ='Muslim'</SqlStatement>
+      <ConnectionString>JTEhw9ynfvOZlIlEr+WBhFo8nDwskmJvKN3d3h6eU7xPnR06hXemd5jDuxz4i4C30L68TZOUW22pB7FL1O0qfc+IrGYWNs0F0Uw0pm9qaMJjfxsN2PjR79PiNXm5tteAQgDNAYPqT9bT4jV5ubbXgIVoglKsDiaCZe6cSK68dXwulZ8+pFZSBzVjsw19bkZI</ConnectionString>
+      <dbms>PostgreSql</dbms>
+    </Report>
+    <Report name="re4d">
+      <ReportCategory>employee2</ReportCategory>
+      <SqlStatement>SELECT t1.id,t1.emp_id
+ FROM employee t1 WHERE t1.emp_id &lt;&gt;'910662105' AND t1.emp_id in ('911609121','964467948','910662105','988310447','944405927','902943117','940620362','921899795','946050978','900038670','950570325','80568306 ','934041971','904002078','941682288','948510920','910627009')</SqlStatement>
+      <ConnectionString>19Bu22YsO2Aljw7pWkRn0wn9I0Eqfe2ntUP2vs6BOSKX4jA6N/qKzS/ktFCtiu8S/B0TQuhtp8XpWJ2HuPbxH/shoDxRyLIVHTx16PsfD00bgn5/0cL6H8TI2tukDJEsAGtp49BqP5/EyNrbpAyRLAShB5HIoHl7W64l4MnsWov8UOI6ACRm+1cXLc+IpUND</ConnectionString>
+      <dbms>PostgreSql</dbms>
+    </Report>
+    <Report name="emp99">
+      <ReportCategory>employee2</ReportCategory>
+      <SqlStatement>SELECT t1.id, t1.version, t1.emp_id, t1.living_place_description, t1.religion, t1.avatar_type, t1.first_name, t1.profile_id, t1.job_title_id, t1.last_name, t1.place_of_birth_id, t1.living_place_id, t1.employee_address_id, t1.emp_no, t1.badge_number, t1.last_updated, t1.mid_name, t1.avatar, t1.user_deleted, t1.date_created, t1.active, t1.place_of_birth_description, t1.identifier, t1.salt, t1.employment_status_id, t1.mid_name2
+ FROM employee t1</SqlStatement>
+      <ConnectionString>QtOelys5W9bAC558lies67SFVCVkELbmOG3YSbCd2un22Ia0zhBomeBJtQROQhV1SFlI/fkfJpL68zxEY2yoz7qifXF5PLQ14pfh1wfZIITOeWfypsFsqLy2W6/OQ6JeSh67Z7WrUpW8tluvzkOiXshjbQD6Fnso6EFyqmB06Q6IdhDuMhGi4Djyl47maVzL</ConnectionString>
+      <dbms>PostgreSql</dbms>
+    </Report>
+    <Report name="tt">
+      <ReportCategory>root</ReportCategory>
+      <SqlStatement>SELECT t1.id, t1.version, t1.in_hour, t1.bage_num, t1.att_day, t1.att_type, t1.in_minute, t1.att_year, t1.exit_hour, t1.att_month, t1.exit_minute
+ FROM attendance_sheet t1</SqlStatement>
+      <ConnectionString>RO76irkPnpjakpSxAsJBWNUqeaR7l2OwZJ362tx8nyF7ng6ScGOvC/1v09JAX/+0vf1/cwP537HG5YRw0pKIJYE0pEsVxguGOCyiVR2Nmzh+fWKruZanluyVJjugluemFI7fiIYOSUjslSY7oJbnpqH4tnif2Vg4ktUk1t7bFOBAS0WLROOy1TmtIBZsS247</ConnectionString>
+      <dbms>PostgreSql</dbms>
+    </Report>
+    <Report name="f">
+      <ReportCategory>root</ReportCategory>
+      <SqlStatement>SELECT t1.first_name, t1.last_name
+ FROM employee t1</SqlStatement>
+      <ConnectionString>SrUhZqeaADOtXnGPREKMuXChw7kVVZtBQPRe2h2M8bvjp6mEHGklitwruy9A3CT2AjzqaKT2mvUcue3E1eTL35hQ3AWpnRCJjQK34GEaqYyaLquCeaJWvYX+jpYhPxPj5IcZgZSiSgeF/o6WIT8T46ClE+Lmab1BMaMBXBJqK72KsGHsNWEG14V0rMX188Zs</ConnectionString>
+      <dbms>PostgreSql</dbms>
+    </Report>
+    <Report name="1 val">
+      <ReportCategory>root</ReportCategory>
+      <SqlStatement>SELECT  t1.first_name,  t1.last_name
+ FROM employee t1 WHERE t1.id ='6232'</SqlStatement>
+      <ConnectionString>SEb+Sb0zSJ75tix+nUDQhVyqmSHgxODtdEKtYBqSswuzNC+Rcmz1iGgvwoOeOU/CQkJA/UmEkNdgHjaMq+RDOXeOIIIP0dTbFQyhcIfzMx0J5yRvxMYsxmU9q1tH3nCRMSnSBg9XZjhlPatbR95wkSvMS+jYV7ET9gRsnGiCRKI4YGR31sSaO6gKvlOtjyji</ConnectionString>
+      <dbms>PostgreSql</dbms>
+    </Report>
+    <Report name="1">
+      <ReportCategory>root</ReportCategory>
+      <SqlStatement>SELECT t1.id, t1.first_name, t2.is_deleted
+ FROM employee t1,employee_bage t2
+ WHERE t2.employee_id=t1.id
+ </SqlStatement>
+      <ConnectionString>/8iXzxj9MqSRPxxs9NflcNsLpDf+D9QesoVU7CT5QVDpObEEhL3acncE9XLiDezJz5jH5tuusOUHauS66lq8uXsx/iwOdoyBpkbEhSYut/b98232B4Cg88q2gSyGB3gDn7Eeaf9QrbHKtoEshgd4A5wXdC7wyjMzixfQxyWcpdaPGXrjpFF9pgmUd/MjsqZZZNVf+anNDOzXO3/bQyRxtg==</ConnectionString>
+      <dbms>PostgreSql</dbms>
+    </Report>
+    <Report name="2">
+      <ReportCategory>root</ReportCategory>
+      <SqlStatement>SELECT t1.id, t1.first_name, t2.is_deleted
+ FROM employee t1,employee_bage t2
+ WHERE t2.employee_id=t1.id
+ </SqlStatement>
+      <ConnectionString>VKL6dg/zYQU41j9cincnwNUmUP2RYlKYaHTBOdlTaXTK9X2WbP39cPz1K+ctoCSRucI3JuD3N9+lYkvW3Gjhj80yqD3LlpgUauiPXwr73Masrt/kTJ6QdmARYeTbItRwa2FWvOdYzhlgEWHk2yLUcJhZKQhr2GLOugqp+6ltGpELLI+NV4ebLKr21QRbV6q4eAhhxw+v16Z/PA9azWpulg==</ConnectionString>
+      <dbms>PostgreSql</dbms>
+    </Report>
+    <Report name="male rep">
+      <ReportCategory>male</ReportCategory>
+      <SqlStatement>SELECT employee.first_name, employee.last_name, employee_profile_attribute.value
+ FROM employee_profile_attribute employee_profile_attribute,employee_profile_employee_profile_attribute employee_profile_employee_profile_attribute,employee_profile employee_profile,employee employee
+ WHERE employee_profile_employee_profile_attribute.employee_profile_attributes_id=employee_profile.id
+ AND employee_profile_employee_profile_attribute.employee_profile_attribute_id=employee_profile_attribute.id
+ AND employee.profile_id=employee_profile.id
+  AND employee_profile_attribute.name ='sex'</SqlStatement>
+      <ConnectionString>O1ggYW1tIKeola/1TXGil4GLnfJx+qcFncd6MFiii5d5ddabn3e4k9HP3NfpW44aHqlA91kGECFw0nPY3Wllz6NxlVzBNKq4FuMWAmKtwzHLYcxlGFZWjLn529WEKRNzXZgL7jcRwTe5+dvVhCkTc3DEk1BSZh0A6Z1UrgrOZ6dxbenkmKu2AAjA7QfhMsAVOq3zfbo26Iw5sG7Ig+aOuw==</ConnectionString>
+      <dbms>PostgreSql</dbms>
+    </Report>
+  </Reports>
+  <PostgresqlConnections>
+    <pgsqlConnection name="hr">
+      <UserId>postgres</UserId>
+      <Password>IRiuXCdY7kE=</Password>
+      <Host>localhost</Host>
+      <DatabaseName>hr</DatabaseName>
+      <Port>5432</Port>
+    </pgsqlConnection>
+    <pgsqlConnection name="darp">
+      <UserId>postgres</UserId>
+      <Password>IRiuXCdY7kE=</Password>
+      <Host>localhost</Host>
+      <DatabaseName>darp</DatabaseName>
+      <Port>5432</Port>
+    </pgsqlConnection>
+  </PostgresqlConnections>
+</MySettings>
